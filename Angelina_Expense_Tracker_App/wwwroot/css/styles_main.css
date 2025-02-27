@@ -1,0 +1,287 @@
+title {
+
+}
+
+body {
+  border: solid;
+  border-width: 6px;
+  border-color:blue;
+  height: 3000px;
+}
+
+h1 {
+  font-family: lato;
+  font-weight: 900;
+  border: solid;
+  border-width: 2px;
+  border-color:blue;
+  height: 78px;
+  margin-bottom: 0px;
+}
+
+h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border: solid;
+  border-width: 2px;
+  border-color:blue;
+
+}
+
+.lato {
+  font-family: lato;
+}
+
+.sidebar-and-stats {
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  border-width: 5px;
+  border-color:black;
+}
+
+h3 {
+  display: flex;
+  font-family: lato;
+  border: solid;
+  border-width: 5px;
+  border-color:purple;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  height: 28px;
+}
+
+.sidebar {
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  border: solid;
+  border-width: 5px;
+  border-color:green;
+  height: 400px;
+  width: 230px;
+  margin-top: 0px;
+}
+
+.add {
+  display: flex;
+  font-family: lato;
+  font-weight: 600;
+  font-size: 12px;
+  border: solid;
+  border-width: 2px;
+  border-color:pink;
+  height: 26px;
+  margin-top: 1px;
+}
+
+.down-arrow {
+  width: 10px;
+  
+  border: solid;
+  border-width: 1px;
+  border-color:red;
+}
+
+.categories-header {
+  border: solid;
+  border-width: 5px;
+  border-color:yellow;
+  height: 40px;
+  width: 100%;
+
+}
+
+.stats-and-pages {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-width: 5px;
+  border-color:lightblue;
+  width: 70%;
+}
+
+.stats-and-expenses {
+  border: solid;
+  border-width: 5px;
+  border-color:red;
+}
+
+.categories-subheader {
+  border: solid;
+  border-width: 5px;
+  border-color:lightblue;
+}
+
+.category-total-expense {
+  display: flex;
+  border: solid;
+  border-width: 5px;
+  border-color:lightblue;
+
+
+}
+
+.image-and-label {
+  display:flex;
+  border: solid;
+  border-width: 5px;
+  border-color:green;
+  height: 35px;
+}
+
+.category {
+  display:flex;
+  flex-direction: column;
+  border: solid;
+  border-width: 2px;
+  border-color:black;
+  width: 20%;
+  height: 65px;
+  font-size: 13px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.expense-total-label {
+    display: flex;
+    border: solid; 
+    border-width: 5px;
+    border-color: pink;
+}
+
+.category-thumbnail {
+  width: 30px;
+  height:30px;
+  margin-bottom: 0px;
+
+}
+
+.expense-by-date {
+  display: block;
+  border:solid;
+  border-width: 5px;
+  border-color: rgb(91, 54, 54);
+}
+
+.today-header {
+  border:solid;
+  border-width: 2px;
+  border-color: darkblue;
+
+  height: 50px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  border:solid;
+  border-width: 5px;
+  border-color: orange;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  border:solid;
+  border-width: 5px;
+  border-color: lightblue;
+  width: 50%;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  border:solid;
+  border-width: 5px;
+  border-color: lightblue;
+  width: 50%;
+}
+
+.past-week {
+  display: flex;
+  border: solid;
+  border-width: 2px;
+  border-color: green;
+  height: 30px;
+}
+
+.all-expenses {
+  display: flex;
+  border:solid;
+  border-width: 2px;
+  border-color: green;
+}
+
+
+
+.tbl-col-and-expenses {
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.something-orange {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 5px;
+    border-color: pink;
+}
+.tbl-columns {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    border: solid;
+    border-width: 5px;
+    border-color: brown;
+    max-width: 50%;
+}
+
+
+.tab-labels-all-expenses {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.expense-table-body {
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.data-column {
+  width: 90px;
+  height: 30px;
+}
+
+
+
+
+.expenses {
+  border:solid;
+  border-width: 5px;
+  border-color: gray;
+  width: auto;
+}
+
+.trow {
+    display: flex;
+    flex-direction: row;
+}
+
+.tdata {
+    display: flex;
+    width: 90px;
+    overflow: hidden;
+    border: solid;
+    border-width: 5px;
+    border-color: blue;
+}

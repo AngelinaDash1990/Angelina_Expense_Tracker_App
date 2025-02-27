@@ -1,0 +1,24 @@
+body {
+  background-color: #996FC0;
+  border: solid;
+  border-color: red;
+  border-radius: 5px;
+}
+
+h1 {
+  display: flex;
+  color: #BFECFF;
+  justify-content: center;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  border-radius: 555px;
+  width: 75px;
+  color: black;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #BFECFF;
+}

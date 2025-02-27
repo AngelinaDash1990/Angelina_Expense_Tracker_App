@@ -1,0 +1,276 @@
+@model ExpenseViewModel
+@using Angelina_Expense_Tracker_App_Data_Access.Models
+
+@{
+	ViewData["Title"] = "CRUD Applications | Expense";
+}
+
+<script type="text/javascript">
+	function openLocation(url) {
+		window.location.href = url;
+	}
+
+	function confirmDelete(id) {
+		$("#hdnDeleteExpenseID").val(id);
+		$("#deleteModal").modal("show");
+	}
+
+	function cancelDelete() {
+		$("#hdnDeleteExpenseID").val(0);
+		$("#deleteModal").modal("hide");
+	}
+
+	function deleteExpense() {
+		var id = $("#hdnDeleteExpenseID").val();
+		window.location.href = "/Expense/DeleteExpense/" + id;
+	}
+</script>
+
+<div class="background_main">
+
+	<input type="hidden" id="hdnDeleteExpenseID" value="0" />
+
+	<div>
+		<h1 class="lato">Expense Tracker</h1>
+	</div>
+	<div class="sidebar-and-stats lato">
+		<div class="sidebar lato">
+			<h3 class="quick-actions-header-label">Quick Actions</h3>
+			<p class="quick-actions-header-underline"></p>
+
+			<div class="add add-1 lato">
+				<img class="down-arrow"
+					 src="/Images/DownwardArrow.png"
+					 alt="downward gray arrow" />
+				<a class="new-expense-link" href="~/Expense/NewExpense">Add new $1 spend</a>
+			</div>
+
+			<div class="add add-5 lato">
+				<img class="down-arrow"
+						 src="/Images/DownwardArrow.png"
+						 alt="downward gray arrow" />
+				<a class="new-expense-link" href="~/Expense/NewExpense">Add new $5 spend</a>
+			</div>
+
+			<div class="add add-10 lato">
+				<img class="down-arrow"
+						 src="/Images/DownwardArrow.png"
+						 alt="downward gray arrow" />
+				<a class="new-expense-link" href="~/Expense/NewExpense">Add new $10 spend</a>
+			</div>
+
+			<div class="add add-25 lato">
+				<img class="down-arrow"
+						 src="/Images/DownwardArrow.png"
+						 alt="downward gray arrow" />
+				<a class="new-expense-link" href="~/Expense/NewExpense">Add new $25 spend</a>
+			</div>
+
+			<div class="add add-50 lato">
+				<img class="down-arrow"
+						 src="/Images/DownwardArrow.png"
+						 alt="downward gray arrow" />
+				<a class="new-expense-link" href="~/Expense/NewExpense">Add new $50 spend</a>
+			</div>
+		</div>
+
+		<div class="stats-and-pages lato">
+			<div class="categories-header lato">
+				<h3 style="font-size: 30px; height: 50px;" class="categories-header-label">Categories</h3>
+				<p class="categories-header-label-underline"></p>
+			</div>
+
+			<div class="stats-and-expenses lato">
+				@{//<div class="categories-subheader lato"><p style="font-size: 30px; height: 30px;">Categories</p></div>
+				}
+				<div class="category-total-expense lato">
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/shopping-bag_gray_nobg.png"
+								 alt="" />
+							<p>Shopping</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalShoppingExpense.ToString("C2")</p>
+						</div>
+					</div>
+
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/fork-and-knife.png"
+								 alt="gray fork and knife" />
+							<p>Food</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalFoodExpense.ToString("C2")</p>
+						</div>
+					</div>
+
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/gradesheet_gray.png"
+								 alt="" />
+							<p>Education</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalEducationExpense.ToString("C2")</p>
+						</div>
+					</div>
+
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/water-drop.png"
+								 alt="" />
+							<p>Bills And Utilities</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalBillsExpense.ToString("C2")</p>
+						</div>
+					</div>
+
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/heartrate.png"
+								 alt="" />
+							<p>Health And Welness</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalHealthExpense.ToString("C2")</p>
+						</div>
+					</div>
+
+					<div class="category lato">
+						<div class="image-and-label">
+							<img class="category-thumbnail"
+								 src="~/Images/movie-film.png"
+								 alt="" />
+							<p>Entertainment</p>
+						</div>
+						<div>
+							<p class="expense-total-label">@Model.TotalEntertainmentExpense.ToString("C2")</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="expense-by-date">
+				<div class="title-header">
+					<p class="today-header" style="font-size: 30px;">Today</p>
+					<p class="header-underline"></p>
+
+					<div class="tabs">
+						<div class="left-side">
+							<div class="all-expenses">
+								<img class="category-thumbnail"
+									 src="~/Images/DownwardArrow.png"
+									 alt="" />
+
+								<h5 style="font-size: 30px;">All Expenses</h5>
+							</div>
+						</div>
+
+						<div class="right-side">
+							<div class="past-week">
+								<img class="category-thumbnail"
+									 src="~/Images/calander.png"
+									 alt="" />
+
+								<h5 style="font-size: 30px;">Past Week</h5>
+							</div>
+						</div>
+
+						<div class="column-labels"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tbl-col-and-expenses">
+
+				<table class="tbl-columns">
+					<thead class="tab-labels-weekly">
+						<tr>
+							<th class="data-column">Name</th>
+							<th class="data-column">Category</th>
+							<th class="data-column">Location</th>
+							<th class="data-column">Amount</th>
+							<th class="data-column">Date</th>
+							<th class="data-column">Notes</th>
+						</tr>
+					</thead>
+					<tbody class="">
+
+						@foreach (ExpenseModel expense in Model.ExpenseList)
+						{
+							<tr class="trow">
+								<td class="tdata">@expense.Name</td>
+								<td class="tdata">@expense.Category</td>
+								<td class="tdata">@expense.Location</td>
+								<td class="tdata">$@expense.Amount.ToString("N2")</td>
+								<td class="tdata-date">@expense.Date</td>
+								<td class="tdata">@expense.Notes</td>
+								<td class="tdata"><button type="button" onclick="javascript:openLocation('@Url.Action("UpdateExpense", "Expense", new { expenseID = expense.ExpenseID })')" class="edit-expense-button">EDIT</button></td>
+								<td class="tdata"><button type="button" onclick="javascript:confirmDelete(@expense.ExpenseID)" class="delete-expense-button">DELETE</button></td>
+							</tr>
+						}
+
+						<!-- Add rows here -->
+					</tbody>
+				</table>
+
+				<table class="tbl-columns-past-week">
+					<thead class="tab-labels-all-expenses">
+						<tr class="trow">
+							<th class="data-column">Name</th>
+							<th class="data-column">Category</th>
+							<th class="data-column">Location</th>
+							<th class="data-column">Amount</th>
+							<th class="data-column">Date</th>
+							<th class="data-column">Notes</th>
+						</tr>
+					</thead>
+					<tbody class="tbody">
+
+						@foreach (ExpenseModel expense in Model.WeeklyExpenseList)
+						{
+							<tr class="trow">
+								<td class="tdata">@expense.Name</td>
+								<td class="tdata">@expense.Category</td>
+								<td class="tdata">@expense.Location</td>
+								<td class="tdata">$@expense.Amount.ToString("N2")</td>
+								<td class="tdata-date">@expense.Date</td>
+								<td class="tdata">@expense.Notes</td>
+								<td class="tdata"><button type="button-edit" onclick="javascript:openLocation('@Url.Action("UpdateExpense", "Expense", new { expenseID = expense.ExpenseID })')" class="edit-expense-button">EDIT</button></td>
+								<td class="tdata"><button type="button-delete" onclick="javascript:confirmDelete(@expense.ExpenseID)" class="delete-expense-button">DELETE</button></td>
+							</tr>
+						}
+
+						<!-- Add rows here -->
+					</tbody>
+				</table>
+
+			</div>
+
+			<div class="expenses"></div>
+		</div>
+	</div>
+
+	<div id="deleteModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">CONFIRM DELETE</h5>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to delete this expense record?</p>
+					<button type="button" onclick="javascript:cancelDelete()" class="btn btn-secondary btn-sm">CANCEL</button>
+					<button type="button" onclick="javascript:deleteExpense()" class="btn btn-danger btn-sm">DELETE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

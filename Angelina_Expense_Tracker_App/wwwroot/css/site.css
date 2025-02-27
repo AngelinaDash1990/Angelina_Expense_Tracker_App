@@ -1,0 +1,488 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: lightblue;
+  margin-bottom: 60px;
+}
+
+/*This is the start of Main styles*/
+
+title {
+}
+
+background_main {
+  background-color: red;
+  height: 3000px;
+}
+
+h1 {
+  font-family: lato;
+  font-weight: 900;
+  height: 78px;
+  margin-bottom: 0px;
+}
+
+h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.lato {
+  font-family: lato;
+}
+
+.sidebar-and-stats {
+  display: flex;
+  flex-direction: row;
+}
+
+h3 {
+  display: flex;
+  font-family: lato;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  height: 28px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 230px;
+  margin-top: 0px;
+}
+
+.quick-actions-header-label {
+  font-size: 22px;
+  font-weight: bolder;
+  height: auto;
+}
+
+.quick-actions-header-underline {
+  border: solid;
+  border-width: 1px;
+  border;color: gray;
+  width: 80%;
+}
+  
+.add {
+  display: flex;
+  align-items: center;
+  font-family: lato;
+  font-weight: 600;
+  font-size: 12px;
+  height: 26px;
+  width: 160px;
+  margin-top: 7px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  margin: 6px;
+}
+
+.new-expense-link {
+  font-size: 14px;
+}
+
+.categories-header {
+  width: 100%;
+  margin-bottom;
+}
+
+.categories-header-label {
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 0px;
+  height: auto;
+}
+
+.categories-header-label-underline {
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.stats-and-pages {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 5px;
+}
+
+.stats-and-expenses {
+  height: auto;
+}
+
+.categories-subheader {
+}
+
+.category-total-expense {
+  display: flex;
+}
+
+.image-and-label {
+  display: flex;
+  height: 45px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: auto;
+  font-size: 13px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.expense-total-label {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.category-thumbnail {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0px;
+}
+
+.expense-by-date {
+  display: block;
+}
+
+.today-header {
+  height: 50px;
+}
+
+.header-underline {
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  vertical-align: bottom;
+  width: auto;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.past-week {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.all-expenses {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.tbl-col-and-expenses {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  width: 100%;
+}
+
+.tbl-columns {
+  display: flex;
+  flex-direction: column;
+  table-layout: fixed;
+  overflow-x: auto;
+  table-layout: fixed;
+  width: 50%;
+  height: 350px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.tbl-columns-past-week {
+  display: flex;
+  flex-direction: column;
+  table-layout: fixed;
+  overflow-x: auto;
+  table-layout: fixed;
+  width: 50%;
+  height: 350px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+  margin-left: 2px;
+}
+
+.tab-labels-weekly {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.tab-labels-all-expenses {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.expense-table-body {
+}
+
+.data-column {
+  width: 100px;
+  height: 34px;
+  text-align: center;
+}
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.trow {
+  display: flex;
+  overflow: hidden;
+  width: 800px;
+}
+
+.tdata {
+  display: flex;
+  width: 100px;
+  height: 70px;
+  font-size: 18px;
+  align-items: center;
+  overflow: auto;
+  max-width: 300px;
+  line-height: 20px;
+  border: solid;
+  border-width: 1px;
+  border-color: purple;
+}
+
+.tdata-date {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  width: 100px;
+  max-width: 300px;
+  height: 70px;
+  font-size: 16px;
+  font-weight: bolder;
+  border: 1px solid purple;
+}
+
+.edit-expense-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+.delete-expense-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+/*end styles.main*/
+/*start of styles new expense*/
+
+bodyy {
+  padding-left: 15%;
+  padding-top: 10%;
+  height: 1000px;
+}
+
+p {
+  display: flex;
+  font-family: lato;
+  font-weight: 700;
+  height: auto;
+  align-items: center;
+}
+
+.header-icon {
+  width: 43px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.expense-title {
+  display: flex;
+  font-family: lato;
+  font-weight: 700;
+  font-size: 40px;
+  border: solid;
+  border-radius: 5px;
+  border-color: black;
+  max-height: 120px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin-bottom: 0px;
+}
+
+.datatype-label {
+  display: flex;
+  width: 80px;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+input {
+  display: flex;
+  max-height: 20px;
+}
+
+.cancel-and-confirm {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+}
+
+.confirm,
+.cancel {
+  width: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cancel-image {
+  display: flex;
+  width: 120px;
+}
+
+.confirm-image {
+  display: flex;
+  width: 120px;
+}
+
+/*end of styles new exense*/
+/*start of styles update expense*/
+
+bodyrty {
+  padding-left: 15%;
+  padding-top: 10%;
+  height: 1000px;
+}
+
+p {
+  font-family: lato;
+  font-weight: 700;
+}
+
+.header-icon {
+  width: 43px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.expense-title {
+  display: flex;
+  font-family: lato;
+  font-weight: 700;
+  font-size: 40px;
+  border: solid;
+  border-radius: 5px;
+  border-color: black;
+  max-height: 120px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin-bottom: 0px;
+}
+
+.current-expense-date {
+  max-height: 30px;
+}
+
+.datatype-label {
+  display: flex;
+  width: 80px;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+input {
+  display: flex;
+  max-height: 20px;
+}
+
+.cancel-and-confirm {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+}
+
+.confirm,
+.cancel {
+  width: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cancel-image {
+  display: flex;
+  width: 120px;
+  margin-left: 0px;
+}
+
+.confirm-image {
+  display: flex;
+  width: 120px;
+}

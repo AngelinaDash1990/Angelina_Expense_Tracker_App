@@ -1,0 +1,83 @@
+@model ExpenseViewModel 
+
+
+<form asp-action="NewExpense" asp-controller="Expense" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="row">
+          <div class="col-6
+                       offset-2
+                       text-center">
+            <h1 class="display-4"
+                style="margin: 20px 0px;">
+              New Expense
+            </h1>
+          </div>
+        </div>
+
+        <div class="header-image">
+          <img class="header-icon"
+               src="images/downward_gray.png"
+               alt="" />
+        </div>
+        <input asp-for="CurrentExpense.Name"
+               class="expense-title"
+               type="text"
+               name="Name"
+               value=""
+               placeholder="Expense" />
+
+        <div class="input-field">
+          <p class="datatype-label">Category</p>
+          <input asp-for="CurrentExpense.Category"
+                 type="text"
+                 name="Category"
+                 placeholder="Empty" />
+        </div>
+        <div class="input-field">
+          <p class="datatype-label">Location</p>
+          <input asp-for="CurrentExpense.Location"
+                 type="text"
+                 name="Location"
+                 placeholder="Empty" />
+        </div>
+        <div class="input-field">
+          <p class="datatype-label">Amount</p>
+          <input asp-for="CurrentExpense.Amount"
+                 type="number"
+                 name="Amount"
+                 step="0.01"
+                 min="0"
+                 max="100"
+                 placeholder="Empty">
+        </div>
+        <div class="input-field">
+          <p class="datatype-label">Date</p>
+          <input asp-for="CurrentExpense.Date"
+                 class="current-expense-date"
+                 type="datetime-local"
+                 name="Date"
+                 placeholder="Empty" />
+        </div>
+        <div class="input-field">
+          <p class="datatype-label">Notes</p>
+          <input asp-for="CurrentExpense.Notes"
+                 type="text"
+                 name="Notes"
+                 placeholder="Empty" />
+        </div>
+
+        <div class="cancel-and-confirm">
+          <a class="cancel"
+                 href='@Url.Action("Main", "Expense")'>
+            <img class="cancel-image"
+                 src="~/Images/cancel-button_red.png"
+                 alt="" />
+          </a>
+          <button type="submit"
+                  class="confirm">
+            <img class="confirm-image"
+                 src="~/Images/confirm-button_green.png"
+                 alt="" />
+          </button>
+        </div>
+ </form>   

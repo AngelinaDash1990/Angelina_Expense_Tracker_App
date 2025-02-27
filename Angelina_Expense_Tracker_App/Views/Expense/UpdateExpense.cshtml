@@ -1,0 +1,93 @@
+﻿@model ExpenseViewModel
+@{
+  string pageType = Model.CurrentExpense.ExpenseID > 0 ? "Update Expense" : "Create Expense";
+  ViewData["Title"] = $"CRUD Applications | {pageType}";
+}
+
+<form method="post" action="/Expense/UpdateExpense">
+  <div asp-validation-summary="All" class="text-danger"></div>
+
+  <div class="row">
+    <div class="col-6
+                 offset-2
+                 text-center">
+      <h1 style="font-weight: bold"
+          class="display-4"
+          style="margin: 20px 0px;">
+        @pageType
+      </h1>
+    </div>
+  </div>
+
+   <input type="hidden" name="expenseID" value="@Model.CurrentExpense.ExpenseID" />
+
+  <div class="header-imag">
+    <img class="header-icon"
+         src="~/Images/downward_gray.png"
+         alt="" />
+  </div>
+
+  <input class="expense-title"
+         type="text"
+         name="name"
+         value="@Model.CurrentExpense.Name"
+         placeholder="EXPENSE NAME" />
+
+  <div class="input-field">
+    <p class="datatype-label">Category</p>
+    <input type="text"
+           name="category"
+           value="@Model.CurrentExpense.Category"
+           placeholder=""/>
+  </div>
+
+  <div class="input-field">
+    <p class="datatype-label">Location</p>
+    <input type="text"
+           name="location"
+           value="@Model.CurrentExpense.Location"
+           placeholder=""/>
+  </div>
+
+  <div class="input-field">
+    <p class="datatype-label">Amount</p>
+    <input type="number"
+           name="amount"
+           step="0.01"
+           min="0"
+           max="100"
+           value="@Model.CurrentExpense.Amount"
+           placeholder="" />
+  </div>
+
+  <div class="input-field">
+    <p class="datatype-label">Date</p>
+    <input class="current-expense-date"
+           type="datetime-local"
+           name="date"
+           value="@Model.CurrentExpense.Date" />
+  </div>
+
+  <div class="input-field">
+    <p class="datatype-label">Notes</p>
+    <input type="text"
+           value="@Model.CurrentExpense.Notes"
+           placeholder="" />
+  </div>
+
+  <div class="cancel-and-confirm">
+    <a class="cancel"
+        href='@Url.Action("Main", "Expense")'>
+        <img class="cancel-image"
+                src="~/Images/cancel-button_red.png"
+                alt="" />
+    </a>
+
+    <button type="submit"
+            class="confirm">
+      <img class="confirm-image"
+           src="~/Images/confirm-button_green.png"
+           alt="Confirm">
+    </button>
+  </div>
+</form>

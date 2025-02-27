@@ -1,0 +1,590 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    border: solid;
+    border-width: 5px;
+    border-color: blue;
+    background-color: lightblue;
+    margin-bottom: 60px;
+}
+
+
+/*This is the start of Main styles*/
+
+
+title {
+}
+
+background_main {
+    border: solid;
+    border-width: 6px;
+    border-color: blue;
+    background-color: red;
+    height: 3000px;
+}
+
+h1 {
+    font-family: lato;
+    font-weight: 900;
+    border: solid;
+    border-width: 2px;
+    border-color: blue;
+    height: 78px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border: solid;
+    border-width: 2px;
+    border-color: blue;
+}
+
+.lato {
+    font-family: lato;
+}
+
+.sidebar-and-stats {
+    display: flex;
+    flex-direction: row;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+h3 {
+    display: flex;
+    font-family: lato;
+    border: solid;
+    border-width: 5px;
+    border-color: purple;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    height: 28px;
+}
+
+.sidebar {
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    border: solid;
+    border-width: 5px;
+    border-color: green;
+    height: 400px;
+    width: 230px;
+    margin-top: 0px;
+}
+
+.quick-actions-header-label {
+  font-size: 22px;
+  font-weight: bolder;
+  height: auto;
+}
+
+.add {
+    display: flex;
+    font-family: lato;
+    font-weight: 600;
+    font-size: 12px;
+    border: solid;
+    border-width: 2px;
+    border-color: pink;
+    height: 26px;
+    margin-top: 1px;
+}
+
+.down-arrow {
+    width: 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+.new-expense-link {
+  font-size: 14px;
+}
+
+.categories-header {
+    border: solid;
+    border-width: 5px;
+    border-color: yellow;
+    width: 100%;
+    margin-bottom
+}
+
+.categories-header-label {
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 0px;
+  height: auto;
+}
+
+.stats-and-pages {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 5px;
+    border-color: lightblue;
+    width: 70%;
+}
+
+.stats-and-expenses {
+    height: auto;
+    border: solid;
+    border-width: 5px;
+    border-color: red;
+}
+
+
+
+.categories-subheader {
+    border: solid;
+    border-width: 5px;
+    border-color: lightblue;
+}
+
+.category-total-expense {
+    display: flex;
+    border: solid;
+    border-width: 5px;
+    border-color: lightblue;
+}
+
+.image-and-label {
+    display: flex;
+    height: 45px;
+    border: solid;
+    border-width: 5px;
+    border-color: green;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    width: 20%;
+    height: auto;
+    font-size: 13px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.expense-total-label {
+    display: flex;
+    border: solid;
+    border-width: 5px;
+    border-color: pink;
+    margin-bottom: 0px;
+}
+
+.category-thumbnail {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+
+.expense-by-date {
+    display: block;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(91, 54, 54);
+}
+
+.today-header {
+    border: solid;
+    border-width: 2px;
+    border-color: darkblue;
+    height: 50px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border: solid;
+    border-width: 5px;
+    border-color: orange;
+    height: auto;
+    vertical-align: bottom;
+    width: auto;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-width: 5px;
+    border-color: lightblue;
+    width: 50%;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-width: 5px;
+    border-color: lightblue;
+    width: 50%;
+}
+
+.past-week {
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-width: 2px;
+    border-color: green;
+    height: auto;
+}
+
+.all-expenses {
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-width: 2px;
+    border-color: green;
+    height: auto;
+}
+
+
+
+.tbl-col-and-expenses {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    border: solid;
+    border-width: 10px;
+    border-color: black;
+    width: 100%;
+}
+
+
+
+.tbl-columns {
+    display: flex;
+    flex-direction: column;
+    table-layout: fixed;
+    overflow-x: auto;
+    table-layout: fixed;
+    border: solid;
+    border-width: 5px;
+    border-color: brown;
+    width: 50%;
+}
+
+.tab-labels-weekly {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  font-size: 20px;
+  border: solid;
+  border-width: 5px;
+  border-color: red;
+}
+
+.tab-labels-all-expenses {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  font-size: 20px;
+  border: solid;
+  border-width: 5px;
+  border-color: green;
+}
+
+.expense-table-body {
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.data-column {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.trow {
+    display: flex;
+    overflow: hidden;
+    width: 800px;
+    
+}
+
+.tdata {
+  display: flex;
+  width: 100px;
+  height: 70px;
+  font-size: 18px;
+  align-items: center;
+  overflow: auto;
+  border: solid;
+  border-width: 5px;
+  border-color: blue;
+  max-width: 300px;
+  line-height: 20px;
+}
+
+.tdata-date {
+  display: flex;
+  width: 100px;
+  height: 70px;
+  font-size: 16px;
+  font-weight: bolder;
+  align-items: center;
+  overflow: auto;
+  border: solid;
+  border-width: 5px;
+  border-color: blue;
+  max-width: 300px;
+}
+
+.edit-expense-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+.delete-expense-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+/*end  styles.main*/
+
+
+/*start of styles new expense*/
+
+
+bodyy {
+    border: solid;
+    border-radius: 5px;
+    border-color: blue;
+    padding-left: 15%;
+    padding-top: 10%;
+    height: 1000px;
+}
+
+p {
+    font-family: lato;
+    font-weight: 700;
+}
+
+.header-icon {
+    width: 43px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.expense-title {
+    display: flex;
+    font-family: lato;
+    font-weight: 700;
+    font-size: 40px;
+    border: solid;
+    border-radius: 5px;
+    border-color: black;
+    max-height: 120px;
+}
+
+.input-field {
+    display: flex;
+    border: solid;
+    border-radius: 5px;
+    border-color: blue;
+    align-items: center;
+    max-width: 80%;
+    margin-bottom: 0px;
+}
+
+
+.datatype-label {
+    display: flex;
+    border: solid;
+    border-width: 5px;
+    border-color: green;
+    width: 80px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+input {
+    display: flex;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+    max-height: 20px;
+}
+
+.cancel-and-confirm {
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    border-radius: 5px;
+    border-color: orange;
+    max-width: 80%;
+}
+
+.confirm, .cancel {
+    width: auto;
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.cancel-image {
+    display: flex;
+    width: 120px;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+}
+
+.confirm-image {
+    display: flex;
+    width: 120px;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+}
+
+/*end of styles new exense*/
+
+
+/*start of styles update expense*/
+
+
+bodyrty {
+    border: solid;
+    border-radius: 5px;
+    border-color: blue;
+    padding-left: 15%;
+    padding-top: 10%;
+    height: 1000px;
+}
+
+p {
+    font-family: lato;
+    font-weight: 700;
+}
+
+.header-icon {
+    width: 43px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.expense-title {
+    display: flex;
+    font-family: lato;
+    font-weight: 700;
+    font-size: 40px;
+    border: solid;
+    border-radius: 5px;
+    border-color: black;
+    max-height: 120px;
+}
+
+.input-field {
+    display: flex;
+    border: solid;
+    border-radius: 5px;
+    border-color: blue;
+    align-items: center;
+    max-width: 80%;
+    margin-bottom: 0px;
+}
+
+.current-expense-date {
+  max-height: 30px;
+}
+
+.datatype-label {
+    display: flex;
+    border: solid;
+    border-width: 5px;
+    border-color: green;
+    width: 80px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+input {
+    display: flex;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+    max-height: 20px;
+}
+
+.cancel-and-confirm {
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    border-radius: 5px;
+    border-color: orange;
+    max-width: 80%;
+}
+
+.confirm, .cancel {
+    width: auto;
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.cancel-image {
+    display: flex;
+    width: 120px;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+    margin-left: 0px;
+}
+
+.confirm-image {
+    display: flex;
+    width: 120px;
+    border: solid;
+    border-radius: 5px;
+    border-color: red;
+}
